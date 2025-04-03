@@ -30,7 +30,7 @@ En esta carpeta se encuentra la plantilla en LaTeX para la elaboración del info
 
 ## Instrucciones para realizar la tarea
 
-Se debera realizar un **Fork** del repositorio y completar todos los puntos solicitados en el `assignment-1.pdf`.
+## Realizar un **Fork** del repositorio 
 
 ### Proceso de Fork del Repositorio
 
@@ -39,3 +39,5 @@ A continuación, se muestran los pasos para realizar un **Fork** del repositorio
 1. Haz clic en el botón **Fork** en la esquina superior derecha del repositorio en GitHub.  
 
 2. Selecciona tu **cuenta personal** donde deseas crear el fork.  
+
+## Completar todos los puntos solicitados en el `assignment-1.pdf`.

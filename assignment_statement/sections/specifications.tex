@@ -1,4 +1,18 @@
-En esta sección se presentará la estructura que tiene que tener su informe, en particular, se detallarán las secciones que debe contener y los elementos que deben ser incluidos en cada una de ellas. En el siguiente repositorio podrá encontrar el \href{https://github.com/pabloealvarez/INF221-2025-1-TAREA-1}{Template} que deben utilizar en esta entrega:
+
+\subsection{Implementaciones}
+
+Para cada uno de los problemas, se debe:
+\begin{itemize}
+    \item Implementar la generación de los casos de prueba en python 
+    \item Implementar cada uno los algoritmos en C++
+    \item Implementar el programa que realizará las mediciones de tiempo y memoria.
+    \item Implementar el programa que generará los gráficos en python.
+\end{itemize}
+
+\subsection{Informe}
+
+
+En el siguiente repositorio podrá encontrar el \href{https://github.com/pabloealvarez/INF221-2025-1-TAREA-1}{Template} que deben utilizar en esta entrega:
 
 \begin{mdframed}
 
@@ -14,97 +28,3 @@ En esta sección se presentará la estructura que tiene que tener su informe, en
     \item Las indicaciones se encuentran en el archivo \texttt{README.md} del repositorio y en la plantilla de \LaTeX. 
 \end{itemize}
 
-\subsection{Introducción (máximo 1 página)}
-
-La introducción de este tipo de informes o reportes, tiene como objetivo principal \textbf{contextualizar los problemas que se van a analizar}, proporcionando al lector la información necesaria para entender la relevancia de los mismos. 
-
-Es fundamental que en esta sección se presenten los antecedentes de los problemas, destacando investigaciones previas o principios teóricos que sirvan como base para los análisis posteriores. Además, deben explicarse los objetivos del informe, que pueden incluir la evaluación de un algoritmo, la comparación de métodos o la validación de resultados experimentales.
-
-
-\subsection{Implementar el Algoritmo (máximo 1 página)}
-
-\begin{mdframed}
-Cada uno de los algoritmos, para cada problema, \textbf{debe ser implementado en C++}, siguiendo los siguientes puntos:
-\end{mdframed}
-
-\subsubsection{Ordenamiento de un arreglo unidimensional de números enteros}
-
-\textbf{Entrada:}
-\begin{itemize}
-    \item Leer un arreglo unidimensional $A$ desde el archivo \texttt{\{n\}\_\{t\}\_\{d\}\_\{m\}\_1.txt} y \texttt{\{n\}\_\{t\}\_\{d\}\_\{m\}\_2.txt}, respectivamente.
-    \begin{itemize}
-        \item $n$ hace referencia a la dimensión de la matriz ($n$ filas y $n$ columnas) y pertenece al conjunto $\mathcal{N} = \{10^1, 10^3, 10^5, 10^{7}, 10^{9}\}$.
-        \item $t$ hace referencia al tipo de matriz, y pertenece al conjunto $\mathcal{T} = \{ \text{ascendente}, \text{descendente}, \text{aleatorio} \}$.
-        \item $d$ hace referencia al dominio de cada elemento del arreglo $d = \{D1, D10\}$, donde $D10 = \{0,1,2,3,4,5,6,7,8,9\}$ y $D100 = \{0,1,2,3,...,99\}$.
-        \item $m$ hace referencia a la muestra aleatoria (o caso de prueba) y pertenece al conjunto $\mathcal{M} = \{a,b,c\}$.
-    \end{itemize}
-\end{itemize}
-
-\textbf{Salida:}
-\begin{itemize}
-    \item Escribir la matriz resultante $M_1 \times M_2$ en el archivo \texttt{\{n\}\_\{t\}\_\{d\}\_\{m\}\_out.txt}.
-\end{itemize}
-
-\subsubsection{Multiplicación de matrices cuadradas de números eneteros}
-
-\textbf{Entrada:}
-\begin{itemize}
-    \item Leer dos matrices cuadradas de entrada $M_1$ y $M_2$ desde los archivos \texttt{\{n\}\_\{t\}\_\{d\}\_\{m\}\_\_1.txt} y \\ 
-    \texttt{\{n\}\_\{t\}\_\{d\}\_\{m\}\_2.txt}, respectivamente.
-    \begin{itemize}
-        \item $n$ hace referencia a la dimensión de la matriz ($n$ filas y $n$ columnas) y pertenece al conjunto $\mathcal{N} = \{2^4, 2^6, 2^8, 2^{10}\}$.
-        \item $t$ hace referencia al tipo de matriz, y pertenece al conjunto $\mathcal{T} = \{ \text{dispersa}, \text{diagonal}, \text{densa} \}$.
-        \item $d$ hace referencia al dominio de cada coeficiente de la matriz $d = \{D0, D10\}$, donde $D0$ implica que el dominio es $\{0,1\}$ y $D10$ que el dominio es $\{0,1,2,3,4,5,6,7,8,9\}$. 
-        \item $m$ hace referencia a la muestra aleatoria (o caso de prueba) y pertenece al conjunto $\mathcal{M} = \{a,b,c\}$.
-    \end{itemize}
-\end{itemize}
-
-\textbf{Salida:}
-\begin{itemize}
-    \item Escribir la matriz resultante $M_1 \times M_2$ en el archivo \texttt{\{n\}\_\{t\}\_\{d\}\_\{m\}\_out.txt}.
-\end{itemize}
-
-Aquí deben explicar la estructura de sus programas haciendo referencias a los archivos y funciones de su entrega. No adjunte código en esta sección.
-
-\subsection{Experimentos (máximo 6 páginas)}
-
-%\epigraph{``\textit{Non-reproducible single occurrences are of no significance to science.}''}{---\citeauthor{popper2005logic},\citeyear{popper2005logic} \cite{popper2005logic}}
-
-En la sección de Experimentos, es fundamental detallar la infraestructura utilizada para asegurar la reproducibilidad de los resultados, un principio clave en cualquier experimento científico. Esto implica especificar tanto el hardware (por ejemplo, procesador Intel Core i7-9700K, 3.6 GHz, 16 GB RAM DDR4, almacenamiento SSD NVMe) como el entorno software (sistema operativo Ubuntu 20.04 LTS, compilador g++ 9.3.0, y cualquier librería relevante). Además, se debe incluir una descripción clara de las condiciones de entrada, los parámetros utilizados y los resultados obtenidos, tales como tiempos de ejecución y consumo de memoria, que permitan a otros replicar los experimentos en entornos similares. \textit{La replicabilidad es un aspecto crítico para validar los resultados en la investigación científica computacional} \cite{inbookFonseca}.
-
-
-\subsubsection{Datasets (máximo 2 páginas)}
-
-Diseña al menos \textbf{cinco casos de prueba} que cubran varios escenarios, incluyendo:
-\begin{itemize}
-    \item Casos donde las cadenas están vacías.
-    \item Casos con caracteres repetidos.
-    \item Casos donde las transposiciones son necesarias.
-\end{itemize}
-
-\paragraph{Documentación de los Casos de Prueba:}
-\begin{itemize}
-    \item Proporciona las cadenas de entrada y los costos para cada operación.
-    \item Muestra la salida esperada para cada caso de prueba, incluyendo la secuencia de operaciones y el costo total.
-    \item Explica por qué la salida es correcta.
-\end{itemize}
-
-Es importante generar varias muestras con características similares para una misma entrada, por ejemplo, variando tamaño del input dentro de lo que les permita la infraestructura utilizada en ests informe, con el fin de capturar una mayor diversidad de casos y obtener un análisis más completo del rendimiento de los algoritmos.\\
-
-\begin{mdframed}
-    Aunque la implementación de los algoritmos debe ser realizada en C++, se recomienda aprovechar otros lenguajes como Python para automatizar la generación de casos de prueba, ya que es más amigable para crear gráficos y realizar análisis de los resultados. Python, con sus bibliotecas como \texttt{matplotlib} o \texttt{pandas}, facilita la visualización de los datos obtenidos de las ejecuciones de los distintos algoritmo bajo diferentes escenarios.\\
-    
-    Además, debido a la naturaleza de las pruebas en un entorno computacional, los tiempos de ejecución pueden variar significativamente dependiendo de factores externos, como la carga del sistema en el momento de la ejecución. Por lo tanto, para obtener una medida más representativa, siempre es recomendable ejecutar múltiples pruebas con las mismas características de entrada y calcular el promedio de los resultados.
-\end{mdframed}
-
-
-\subsubsection{Resultados de los Experimentos (máximo 4 páginas)}
-
-En esta sección, los resultados obtenidos, como las gráficas o tablas, deben estar respaldados por los datos generados durante la ejecución de sus programas. Es fundamental que, junto con el informe, se adjunten los archivos que contienen dichos datos para permitir su verificación. Además, se debe permitir y especficiar como obtener esos archivos desde una ejecución en otro computador (otra infraestructura para hacer los experimentos).
-
-\textbf{No es necesario automatizar la generación de las gráficas}, pero sí es imprescindible que se pueda confirmar que las visualizaciones presentadas son producto de los datos generados por sus algoritmos, aunque la trazabilidad de los datos hasta las visualizaciones es esencial para garantizar que su validez: describa cómo se generaron los datos, cómo se procesaron y cómo se visualizaron de manera que pueda ser replicado por quien lea su informe.
-
-
-\subsection{Conclusiones (máximo 1 página)}
-
-La conclusión de su informe debe enfocarse en el resultado más importante de su trabajo. No se trata de repetir los puntos ya mencionados en el cuerpo del informe, sino de interpretar sus hallazgos desde un nivel más abstracto. En lugar de describir nuevamente lo que hizo, muestre cómo sus resultados responden a la necesidad planteada en la introducción.

@@ -11,32 +11,33 @@
 \end{mdframed}
 
 Para cada uno de los problemas, se debe:
-\begin{itemize}
-    \item Implementar la generación de los casos de prueba, de acuerdo a las especificaciones de <<\nameref{sec:test_cases}>>, en PYTHON: 
-    \begin{itemize}
-        \item \href{https://github.com/pabloealvarez/INF221-2025-1-TAREA-1/blob/master/code/sorting/scripts/array_generator.py}{code/sorting/algorithms/scripts/matrix\_generator.py}
-        \item \href{https://github.com/pabloealvarez/INF221-2025-1-TAREA-1/blob/master/code/matrix_multiplication/scripts/matrix_generator.py}{code/matrix\_multiplication/scripts/matrix\_generator.py}
-    \end{itemize}
+\begin{enumerate}[(1)]
     \item Implementar cada uno los algoritmos en C++:
     \begin{itemize}
         \item \href{https://github.com/pabloealvarez/INF221-2025-1-TAREA-1/blob/master/code/matrix_multiplication/algorithms/naive.cpp}{code/matrix\_multiplication/algorithms/naive.cpp}
         \item \href{https://github.com/pabloealvarez/INF221-2025-1-TAREA-1/blob/master/code/matrix_multiplication/algorithms/strassen.cpp}{code/matrix\_multiplication/algorithms/strassen.cpp}
         \item \href{https://github.com/pabloealvarez/INF221-2025-1-TAREA-1/blob/master/code/sorting/algorithms/sort.cpp}{code/sorting/algorithms/sort.cpp}
         \item \href{https://github.com/pabloealvarez/INF221-2025-1-TAREA-1/blob/master/code/sorting/algorithms/selectionsort.cpp}{code/sorting/algorithms/selectionsort.cpp}
-        \item \href{https://github.com/pabloealvarez/INF221-2025-1-TAREA-1/blob/master/code/sorting/algorithms/heapsort.cpp}{code/sorting/algorithms/heapsort.cpp}
+        \item \href{https://github.com/pabloealvarez/INF221-2025-1-TAREA-1/blob/master/code/sorting/algorithms/mergesort.cpp}{code/sorting/algorithms/mergesort.cpp}
         \item \href{https://github.com/pabloealvarez/INF221-2025-1-TAREA-1/blob/master/code/sorting/algorithms/quicksort.cpp}{code/sorting/algorithms/quicksort.cpp}
     \end{itemize}
-    \item Implementar el programa que realizará las mediciones de tiempo y memoria en C++ (programas principales):
+    \item Implementar el programa que realizará las mediciones de tiempo y memoria en C++ (programas principales) y su respectivo \texttt{makefile}, que ejecutará los algoritmos y generará los archivos de salida en cada uno de los directorios \href{https://github.com/pabloealvarez/INF221-2025-1-TAREA-1/blob/master/code/sorting/data/measurements/}{measurements sorting} y \href{https://github.com/pabloealvarez/INF221-2025-1-TAREA-1/blob/master/code/sortmatrix+multiplication/data/measurements/}{measurements matrix multiplication} con los resultados de cada uno de los algoritmos.
     \begin{itemize}
         \item \href{https://github.com/pabloealvarez/INF221-2025-1-TAREA-1/blob/master/code/sorting/sorting.cpp}{code/sorting/sorting.cpp}
         \item \href{https://github.com/pabloealvarez/INF221-2025-1-TAREA-1/blob/master/code/matrix_multiplication/matrix_multiplication.cpp}{code/matrix\_multiplication/matrix\_multiplication.cpp}
     \end{itemize}
-    \item Implementar el programa que generará los gráficos en PYTHON.
+    
+    \item Implementar el programa que generará los gráficos en PYTHON y que se encargará de leer los archivos generados por los programas principales guardados en  \href{https://github.com/pabloealvarez/INF221-2025-1-TAREA-1/blob/master/code/sorting/data/measurements/}{measurements sorting} y \href{https://github.com/pabloealvarez/INF221-2025-1-TAREA-1/blob/master/code/sortmatrix+multiplication/data/measurements/}{measurements matrix multiplication}, para luego graficar los resultados obtenidos y guardarlos en formato PNG en  \href{https://github.com/pabloealvarez/INF221-2025-1-TAREA-1/blob/master/code/sorting/data/plots/}{plots sorting} y \href{https://github.com/pabloealvarez/INF221-2025-1-TAREA-1/blob/master/code/sortmatrix+multiplication/data/plots/}{plots matrix multiplication}.
     \begin{itemize}
         \item \href{https://github.com/pabloealvarez/INF221-2025-1-TAREA-1/blob/master/code/sorting/scripts/array_generator.py}{code/sorting/algorithms/scripts/plot\_generator.py}
         \item \href{https://github.com/pabloealvarez/INF221-2025-1-TAREA-1/blob/master/code/matrix_multiplication/scripts/matrix_generator.py}{code/matrix\_multiplication/scripts/plot\_generator.py}
     \end{itemize}
-\end{itemize}
+    \item Documentar Cada uno de los pasos anteriores
+    \begin{itemize}
+        \item Completar el archivo \texttt{README.md} del directorio \texttt{code}
+        \item Documentar en cada uno de sus programas, al inicio de cada archivo, fuentes de información, referencias y/o bibliografía utilizada para la implementación de cada uno de los algoritmos.
+    \end{itemize}
+\end{enumerate}
 
 \subsection{Informe}
 

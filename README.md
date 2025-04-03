@@ -1,6 +1,6 @@
 # TAREA 1 INF221 2025-1
 
-> Verificar siempre que se encuentra en la rama `master`
+> Verificar siempre que se encuentra en la rama [master](https://github.com/pabloealvarez/INF221-2025-1-TAREA-1/tree/master)
 
 ## Estructura del Repositorio `INF-2025-1-TAREA-1`  
 
@@ -40,4 +40,4 @@ A continuación, se muestran los pasos para realizar un **Fork** del repositorio
 
 2. Selecciona tu **cuenta personal** donde deseas crear el fork.  
 
-## Completar todos los puntos solicitados en el `assignment-1.pdf`.
+## Completar todos los puntos solicitados en el [assignment-1.pdf](https://github.com/pabloealvarez/INF221-2025-1-TAREA-1/blob/master/assignment_statement/assignment-1.pdf).

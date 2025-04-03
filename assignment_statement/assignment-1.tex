@@ -1,0 +1,87 @@
+\documentclass[10pt,spanish]{article} % Tipo y tamaño de letra del documento.
+
+
+\input{preamble.tex} % Archivo con paquetes y configuraciones
+
+
+\pagestyle{fancy}
+
+\fancyhf{}%
+\fancyfoot[R]{\thepage}%
+ 
+\fancyfoot[R]{\textsc{Algoritmos y Complejidad} \\
+2025-1 \\
+}
+\fancyfoot[L]{Campus Casa Central\\
+Valparaíso}
+\fancyfoot[C]{\thepage}
+\rhead{2025-1}
+\lhead{INF-221}
+\renewcommand{\headrulewidth}{0.4pt}% Line at the header invisible
+\renewcommand{\footrulewidth}{0.4pt}% Footer line not visible with 0pt
+
+
+\newcommand{\tnum}{1}
+\newbool{programs}
+\boolfalse{programs}
+
+
+\chead{TAREA \tnum~  }
+
+\title{
+  \huge
+  \textbf{ENUNCIADO TAREA \tnum~ \\ ALGORITMOS Y COMPLEJIDAD} \\[1ex]
+  \emph{\textquote{Más allá de la notación asintótica: Análisis experimental de algoritmos de ordenamiento y multiplicación de matrices.}} \\[1ex]
+  {\normalsize\textit{Fecha límite de entrega: \tcm{25 de abril de 2025}}}\\
+  }
+
+\author{
+  Equipo \textsc{Algoritmos y Complejidad} 2025-1
+}
+
+
+\date{
+  \small
+  \today\\
+  \currenttime\\
+  Versión 0.0
+}
+
+
+
+\begin{document}
+\maketitle
+\thispagestyle{fancy} %pagina 1 con header y footer
+\vspace{-1.0\baselineskip}
+
+\setlength{\epigraphwidth}{0.7\textwidth}
+
+
+
+\setcounter{tocdepth}{2}
+\tableofcontents
+
+\newpage
+\section{Objetivos}
+\input{sections/objectives}
+\newpage
+
+\section{Especificaciones}
+\input{sections/specifications}
+
+
+\newpage
+
+\section{Condiciones de entrega}
+\input{sections/rules}
+
+\newpage
+\appendix
+
+
+\printbibliography
+
+
+\end{document}
+
+

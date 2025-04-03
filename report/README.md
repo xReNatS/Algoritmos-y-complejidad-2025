@@ -13,7 +13,6 @@ Este repositorio contiene una plantilla en **LaTeX** diseñada específicamente 
 - `references.bib` contiene las referencias bibliográficas. Agregue las suyas.
 - `tikz/` contiene archivos `.tex` con gráficos generados con `TikZ`. Puede agregar más archivos `.tex` con gráficos.
 - `report.pdf` es el archivo de salida generado por `pdflatex`.
-- `images/` contiene imágenes. Puede agregar más imágenes.
 - Elimine las figuras existentes y utilice las que generará en su informe.
 
 ```bash

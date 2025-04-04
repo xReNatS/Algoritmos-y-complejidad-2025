@@ -5,6 +5,5 @@ code/sorting/data/array_input/*.txt
 
 # Ignorar todos los archivos .txt en matrix_input, excepto los especificados
 code/matrix_multiplication/data/matrix_input/*.txt
-!code/matrix_multiplication/data/matrix_input/primer_archivo.txt
-!code/matrix_multiplication/data/matrix_input/segundo_archivo.txt
-
+!code/matrix_multiplication/data/matrix_input/16_densa_D0_a_1.txt
+!code/matrix_multiplication/data/matrix_input/16_densa_D0_a_2.txt

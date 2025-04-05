@@ -1,36 +1,45 @@
-En esta sección se describen los pasos a seguir para completar la tarea. Se espera que cada uno de los pasos se realice de manera ordenada y siguiendo las instrucciones dadas.
+En esta sección se describen los pasos a seguir para completar la tarea, la cual consiste en desarrollar código en C++ <<\nameref{subsec:implementations}>> y en realizar un informe <<\nameref{subsec:report}>>. Se espera que cada uno de los pasos se realice de manera ordenada y siguiendo las instrucciones dadas.
+
 \begin{mdframed}
-    En caso de cualquier duda, contactarse directamente con \textbf{Pablo Álvarez}. Para esto pueden hacerlo por mensaje directo en discord (\url{pabloealvarez}) o correo electrónico (\url{pablo.alvarezs@sansano.usm.cl}). En caso de cualquier de modificaciones, todas se informarán tanto por aula como por discord.
-
-    Todo lo necesario para realizar la tarea se encuentra en la \textbf{rama master} del repositorio de github:
-    \begin{center}
-    
-        \url{https://github.com/pabloealvarez/INF221-2025-1-TAREA-1/tree/master/code}
-            
-    \end{center}
-
-    Es importante mencionar que pueden existir otras ramas, pero master siempre será donde se encuentra la información oficial.
-
-
-
-
+    Abra este documento en algún lector de pdf que permita hipervínculos, ya que en este documento el texto en color \textcolor{blue}{azul} suele indicar un hipervínculo.
 \end{mdframed}
 
-\subsection{Implementaciones}
+\begin{enumerate}[(1)]
+    \item 
+    En caso de cualquier duda, contactarse directamente con \textbf{Pablo Álvarez}. Para esto pueden hacerlo por mensaje directo en discord (\url{pabloealvarez}) o correo electrónico (\url{pablo.alvarezs@sansano.usm.cl}). En caso de cualquier de modificaciones, todas se informarán tanto por aula como por discord.
+    \item Todo lo necesario para realizar la tarea se encuentra en la \textbf{rama master} del repositorio de github:
+\begin{center}
+
+    \url{https://github.com/pabloealvarez/INF221-2025-1-TAREA-1/tree/master/code}
+        
+\end{center}
+\item En el repositorio del punto (2) pueden existir otras ramas, pero master siempre será donde se encuentra la información oficial.
+\end{enumerate}
+
+\subsection{Implementaciones} \label{subsec:implementations}
 
 
 
-Para cada uno de los problemas, se debe:
+
 \begin{enumerate}[(1)]
     \item Implementar cada uno los algoritmos en C++:
     \begin{itemize}
-        \item \href{https://github.com/pabloealvarez/INF221-2025-1-TAREA-1/blob/master/code/matrix_multiplication/algorithms/naive.cpp}{code/matrix\_multiplication/algorithms/naive.cpp}
-        \item \href{https://github.com/pabloealvarez/INF221-2025-1-TAREA-1/blob/master/code/matrix_multiplication/algorithms/strassen.cpp}{code/matrix\_multiplication/algorithms/strassen.cpp}
-        \item \href{https://github.com/pabloealvarez/INF221-2025-1-TAREA-1/blob/master/code/sorting/algorithms/sort.cpp}{code/sorting/algorithms/sort.cpp}
+        \item Para el problema de ordenamiento de un arreglo unidimensional de números enteros, se deben implementar en C++, en los archivos correspondientes, los algoritmos de ordenamiento \textsc{Selection Sort}, \textsc{Merge Sort}, \textsc{Quick Sort} y el algoritmo \textsc{Sort} de la librería estándar de C++. 
+    \begin{itemize}
         \item \href{https://github.com/pabloealvarez/INF221-2025-1-TAREA-1/blob/master/code/sorting/algorithms/selectionsort.cpp}{code/sorting/algorithms/selectionsort.cpp}
         \item \href{https://github.com/pabloealvarez/INF221-2025-1-TAREA-1/blob/master/code/sorting/algorithms/mergesort.cpp}{code/sorting/algorithms/mergesort.cpp}
         \item \href{https://github.com/pabloealvarez/INF221-2025-1-TAREA-1/blob/master/code/sorting/algorithms/quicksort.cpp}{code/sorting/algorithms/quicksort.cpp}
+        \item \href{https://github.com/pabloealvarez/INF221-2025-1-TAREA-1/blob/master/code/sorting/algorithms/sort.cpp}{code/sorting/algorithms/sort.cpp}
     \end{itemize}
+    El algoritmo \textsc{Sort} ya se encuentra implementado en el repositorio con el fin de que sea incluido en sus mediciones del punto (2) de la subsección <<\nameref{subsec:implementations}>>.
+    
+        \item Para el problema de multiplicación de matrices cuadradas de números enteros, se deben implementar en C++, en los archivos correspondientes, los algoritmos de multiplicación \textsc{Naive} y \textsc{Strassen}.
+    \begin{itemize}
+        \item \href{https://github.com/pabloealvarez/INF221-2025-1-TAREA-1/blob/master/code/matrix_multiplication/algorithms/naive.cpp}{code/matrix\_multiplication/algorithms/naive.cpp}
+        \item \href{https://github.com/pabloealvarez/INF221-2025-1-TAREA-1/blob/master/code/matrix_multiplication/algorithms/strassen.cpp}{code/matrix\_multiplication/algorithms/strassen.cpp}
+    \end{itemize}
+    \end{itemize}
+
     \item Implementar el programa que realizará las mediciones de tiempo y memoria en C++ (programas principales) y su respectivo \texttt{makefile}, que ejecutará los algoritmos y generará los archivos de salida en cada uno de los directorios \href{https://github.com/pabloealvarez/INF221-2025-1-TAREA-1/blob/master/code/sorting/data/measurements/}{measurements sorting} y \href{https://github.com/pabloealvarez/INF221-2025-1-TAREA-1/blob/master/code/sortmatrix+multiplication/data/measurements/}{measurements matrix multiplication} con los resultados de cada uno de los algoritmos.
     \begin{itemize}
         \item \href{https://github.com/pabloealvarez/INF221-2025-1-TAREA-1/blob/master/code/sorting/sorting.cpp}{code/sorting/sorting.cpp}
@@ -49,7 +58,7 @@ Para cada uno de los problemas, se debe:
     \end{itemize}
 \end{enumerate}
 
-\subsection{Informe}
+\subsection{Informe} \label{subsec:report}
 
 Luego de realizar las implementaciones y experimentos, se debe generar un informe en \LaTeX\ que contenga los resultados obtenidos y una discusión sobre ellos. En el siguiente repositorio podrá encontrar el \href{https://github.com/pabloealvarez/INF221-2025-1-TAREA-1/tree/master/report}{Template} que \textbf{deben utilizar}, en esta entrega:
 

@@ -30,14 +30,8 @@ En esta carpeta se encuentra la plantilla en LaTeX para la elaboración del info
 
 ## Instrucciones para realizar la tarea
 
-## Realizar un **Fork** del repositorio 
+## Clonar este repositorio 
 
-### Proceso de Fork del Repositorio
-
-A continuación, se muestran los pasos para realizar un **Fork** del repositorio:
-
-1. Haz clic en el botón **Fork** en la esquina superior derecha del repositorio en GitHub.  
-
-2. Selecciona tu **cuenta personal** donde deseas crear el fork.  
+Debe clonar este repositorio en su máquina local y crear uno nuevo en su cuenta de GitHub que tenga el mismo nombre (INF-2025-1-TAREA-1). 
 
 ## Completar todos los puntos solicitados en el [assignment-1.pdf](https://github.com/pabloealvarez/INF221-2025-1-TAREA-1/blob/master/assignment_statement/assignment-1.pdf).

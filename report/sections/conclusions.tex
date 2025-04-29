@@ -1,13 +1,7 @@
-\begin{mdframed}
-    \textbf{La extensión máxima para esta sección es de 1 página.}
-\end{mdframed}
+En este estudio experimental hemos comparado dos algoritmos de multiplicación de matrices (Naive y Strassen) y cuatro de ordenamiento (SelectionSort, MergeSort, QuickSort y \texttt{std::sort}), analizando su rendimiento en tiempo y memoria bajo distintas condiciones de entrada.
 
-La conclusión de su informe debe enfocarse en el resultado más importante de su trabajo. No se trata de repetir los puntos ya mencionados en el cuerpo del informe, sino de interpretar sus hallazgos desde un nivel más abstracto. En lugar de describir nuevamente lo que hizo, muestre cómo sus resultados responden a la necesidad planteada en la introducción.
+Para \textbf{multiplicación de matrices}, Strassen demostró su superioridad asintótica al reducir el tiempo de ejecución en dimensiones grandes (\(n\ge 2^8\)), a costa de un mayor consumo de memoria por las estructuras intermedias necesarias para la recursión. En matrices dispersas, el beneficio persiste, aunque el overhead inicial amortiza menos la ganancia en casos pequeños. De ello concluimos que Strassen es preferible cuando la memoria no es un recurso crítico y \(n\) es suficientemente grande.
 
-\begin{itemize}
-    \item  No vuelva a describir lo que ya explicó en el desarrollo del informe. En cambio, interprete sus resultados a un nivel superior, mostrando su relevancia y significado.
-    \item Aunque no debe repetir la introducción, la conclusión debe mostrar hasta qué punto logró abordar el problema o necesidad planteada en el inicio. Reflexione sobre el éxito de su análisis o experimento en relación con los objetivos propuestos.
-    \item No es necesario restablecer todo lo que hizo (ya lo ha explicado en las secciones anteriores). En su lugar, centre la conclusión en lo que significan sus resultados y cómo contribuyen al entendimiento del problema o tema abordado.
-    \item No deben centrarse en sí mismos o en lo que hicieron durante el trabajo (por ejemplo, evitando frases como "primero hicimos esto, luego esto otro...").
-    \item Lo más importante es que no se incluyan conclusiones que no se deriven directamente de los resultados obtenidos. Cada afirmación en la conclusión debe estar respaldada por el análisis o los datos presentados. Se debe evitar extraer conclusiones generales o excesivamente amplias que no puedan justificarse con los experimentos realizados.
-\end{itemize}
+En los \textbf{algoritmos de ordenamiento}, \texttt{std::sort} resultó el más eficiente, aprovechando híbridos de Quicksort e introspección para evitar los peores casos. MergeSort ofrece un rendimiento estable, con un costo de memoria adicional moderado, mientras que QuickSort puro es muy rápido en entradas aleatorias, pero puede degradarse en casos ordenados si no se aplica aleatorización del pivote. SelectionSort, debido a su complejidad cuadrática y bajo uso de memoria, solo es viable para vectores pequeños.
+
+En conjunto, los resultados confirman las expectativas teóricas: algoritmos con mejor cota asintótica (Strassen, QuickSort, MergeSort) superan a los de orden cuadrático o cúbico en instancias grandes, aunque su implementación práctica debe equilibrar el consumo de memoria y el overhead de gestión de datos. Finalmente, este análisis refuerza la importancia de combinar estudios teóricos con mediciones experimentales para elegir la solución adecuada según las restricciones de cada problema.  

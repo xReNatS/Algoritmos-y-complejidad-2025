@@ -1,5 +1,36 @@
+Los casos de prueba que fueron utilizados cubren las cuatro dimensiones especificadas para cada problema: tamaño de entrada (\(n\)), tipo de estructura o disposición (\(t\)), dominio de valores (\(d\)) y réplica de muestra (\(m\)). A continuación se comentan ambos grupos de casos.
 
-Siempre 
-es importante generar varias muestras con características similares para una misma entrada, por ejemplo, variando tamaño del input dentro de lo que les permita la infraestructura utilizada en ests informe, con el fin de capturar una mayor diversidad de casos y obtener un análisis más completo del rendimiento de los algoritmos.
+\subsubsection{Multiplicación de matrices}
+\begin{itemize}
+  \item \textbf{Tamaños (\(n\))}: \(\{2^4,\,2^6,\,2^8,\,2^{10}\}\).  
+    Estos valores permiten medir cómo escalan el tiempo (\(O(n^3)\) vs. \(O(n^{\log_2 7})\)) y el uso de memoria con el crecimiento de la dimensión.
+  \item \textbf{Tipos (\(t\))}: \{\emph{densa}, \emph{diagonal}, \emph{dispersa}\}.  
+    Cada estructura permite evaluar el rendimiento en escenarios de cómputo completo, optimización para ceros en diagonal y aprovechamiento de la dispersión de datos.
+    \begin{itemize}
+      \item \emph{Densa}: coeficientes aleatorios no nulos, representa el peor caso de cómputo completo.  
+      \item \emph{Diagonal}: matrices con solo la diagonal principal distinta de cero, evalúa cómo afectan las optimizaciones en cero.  
+      \item \emph{Dispersa}: pocos elementos no nulos distribuidos aleatoriamente, comprueba si el overhead de recursión amortiza el cálculo en estructuras crestas.  
+    \end{itemize}
+  \item \textbf{Dominio (\(d\))}: \(\{D0,\,D10\}\), con  
+    \(D0=\{0,1\}\) y \(D10=\{0,\dots,9\}\).  
+    Esta variación confirma que los algoritmos mantienen su comportamiento sin depender de la amplitud del dominio.
+  \item \textbf{Muestras (\(m\))}: \(\{a,b,c\}\).  
+    Tres réplicas para cada combinación permiten calcular varianza y construir intervalos de confianza de tiempo y memoria.
+  \item \textbf{Generación}: los archivos fueron producidos con \texttt{matrix\_generator.py} 
   
-Dado que esta tarea los casos de pueba son descritos en el enunciado, y entregados los programas en PYTHON que los generan, \textbf{no deben} considerar otros casos de prueba, ni otros tamaños de entrada. \textbf{En esta sección sólo debe comentar los casos de prueba} entregados en el enunciado de manera crítica.
+  (en \texttt{code/matrix\_multiplication/scripts/}), de manera que se pueda reproducir lo experimentado.
+\end{itemize}
+
+\subsubsection{Ordenamiento}
+\begin{itemize}
+  \item \textbf{Tamaños (\(n\))}: \(\{10^1,\,10^3,\,10^5,\,10^7\}\).  
+    Con ellos se mide el desempeño desde vectores muy pequeños hasta grandes, comparando \(O(n\log n)\) frente a \(O(n^2)\).
+  \item \textbf{Tipos (\(t\))}: \{\emph{aleatorio}, \emph{ascendente}, \emph{descendente}\}.  
+    Cada disposición corresponde a caso promedio, mejor y peor, permitiendo analizar la robustez de los algoritmos.
+  \item \textbf{Dominio (\(d\))}: \(\{D1,\,D7\}\), donde  
+    \(D1=\{0,1\}\) y \(D7=\{0,\dots,10^7\}\).  
+    Esto asegura que las comparaciones no se vean afectadas por la dispersión de valores.
+  \item \textbf{Muestras (\(m\))}: \(\{a,b,c\}\).  
+    Tres instancias aleatorias para cada caso permiten estimar la variabilidad estadística de tiempos y consumos.
+  \item \textbf{Generación}: los vectores fueron creados con \texttt{array\_generator.py} (en \texttt{code/sorting/scripts/}), asegurando que las pruebas coincidan con el repositorio oficial.
+\end{itemize}

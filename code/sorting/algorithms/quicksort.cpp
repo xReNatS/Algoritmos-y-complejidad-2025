@@ -1,46 +1,59 @@
-#include <iostream>
-#include <vector>
-#include <cstdlib>  // Para rand() y srand()
-#include <ctime>    // Para time()
+// referencia: https://www.geeksforgeeks.org/quick-sort-algorithm/ y modificado por chatgpt
 
+#include <vector>
+#include <algorithm> 
+#include <cmath> // para log2
 using namespace std;
 
-// Función para intercambiar dos elementos
-void intercambiar(vector<int>& arr, int i, int j) {
-    int temp = arr[i];
-    arr[i] = arr[j];
-    arr[j] = temp;
+void insertionSort(vector<int>& arr, int low, int high) {
+    for (int i = low + 1; i <= high; i++) {
+        int key = arr[i];
+        int j = i - 1;
+        while (j >= low && arr[j] > key) {
+            arr[j + 1] = arr[j];
+            j--;
+        }
+        arr[j + 1] = key;
+    }
 }
 
-// Función para elegir un pivote aleatorio
-int seleccionarPivoteAleatorio(int inicio, int fin) {
-    return inicio + std::rand() % (fin - inicio + 1);
-}
-
-// Función de partición con pivote aleatorio
-int particionar(vector<int>& arr, int inicio, int fin) {
-    // Selecciona un pivote aleatorio y lo coloca al final del subarray
-    int pivoteIndex = seleccionarPivoteAleatorio(inicio, fin);
-    intercambiar(arr, pivoteIndex, fin);
-    
-    int pivote = arr[fin];
-    int i = inicio - 1;
-
-    for (int j = inicio; j < fin; ++j) {
-        if (arr[j] <= pivote) {
-            ++i;
-            intercambiar(arr, i, j);
+int partition(vector<int>& arr, int low, int high) {
+    int pivot = arr[high];
+    int i = low - 1;
+    for (int j = low; j < high; j++) {
+        if (arr[j] < pivot) {
+            i++;
+            swap(arr[i], arr[j]);
         }
     }
-    intercambiar(arr, i + 1, fin);
+    swap(arr[i + 1], arr[high]);
     return i + 1;
 }
 
-// Función Quicksort recursiva
-void quicksort(vector<int>& arr, int inicio, int fin) {
-    if (inicio < fin) {
-        int pivoteIndex = particionar(arr, inicio, fin);
-        quicksort(arr, inicio, pivoteIndex - 1);
-        quicksort(arr, pivoteIndex + 1, fin);
+void introSortUtil(vector<int>& arr, int low, int high, int depthLimit) {
+    int size = high - low + 1;
+
+    if (size <= 32) {
+        insertionSort(arr, low, high);
+        return;
     }
+
+    if (depthLimit == 0) {
+        // Cambiar a heapsort para evitar mal rendimiento
+        make_heap(arr.begin() + low, arr.begin() + high + 1);
+        sort_heap(arr.begin() + low, arr.begin() + high + 1);
+        return;
+    }
+
+    int pi = partition(arr, low, high);
+    introSortUtil(arr, low, pi - 1, depthLimit - 1);
+    introSortUtil(arr, pi + 1, high, depthLimit - 1);
 }
+
+void quickSort(vector<int>& arr) {
+    int n = arr.size();
+    int depthLimit = 2 * log2(n);
+    introSortUtil(arr, 0, n - 1, depthLimit);
+}
+
+

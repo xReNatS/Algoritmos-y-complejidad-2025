@@ -1,6 +1,8 @@
 // referencia: https://www.geeksforgeeks.org/selection-sort-algorithm-2/
 // C++ program to implement Selection Sort
-#include <bits/stdc++.h>
+#include <vector>
+#include <algorithm> 
+#include "selectionsort.hpp"
 using namespace std;
 
 void selectionSort(vector<int> &arr) {

@@ -1,0 +1,23 @@
+La soluci\'on por fuerza bruta consiste en generar todas las posibles subsecuencias de la secuencia \texttt{s} y verificar para cada una si es una subsecuencia de \texttt{t}. De todas las subsecuencias v\'alidas, se selecciona aquella de mayor longitud (la LCS). Luego, usando las posiciones de la LCS en ambas secuencias, se determinan las diferencias al segmentar las partes no comunes.
+
+\begin{algorithm}[H]
+\SetAlgoLined
+\KwIn{Secuencias $s$, $t$}
+\KwOut{Lista de diferencias entre $s$ y $t$}
+$lcs \leftarrow \text{cadena vac\'ia}$\;
+\For{cada subsecuencia $sub$ de $s$}{
+  \If{$sub$ es subsecuencia de $t$ \textbf{y} $|sub| > |lcs|$}{
+    $lcs \leftarrow sub$\;
+    Guardar posiciones de $sub$ en $s$ y $t$\;
+  }
+}
+Construir diferencias usando $lcs$ y posiciones\;
+\Return lista de diferencias
+\caption{Algoritmo de fuerza bruta para diferencias de secuencias}
+\end{algorithm}
+
+\subsubsection*{Complejidad}
+\begin{itemize}
+  \item Tiempo: \( O(2^n \cdot m) \), donde \( n = |s| \), porque se generan \( 2^n \) subsecuencias y cada una puede tomar hasta \( O(m) \) para verificar si es subsecuencia de \texttt{t}.
+  \item Espacio: \( O(n + m) \), principalmente por almacenar posiciones y subsecuencias temporales.
+\end{itemize}

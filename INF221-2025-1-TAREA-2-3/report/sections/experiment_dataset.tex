@@ -1,0 +1,10 @@
+
+
+Los casos de prueba para evaluar el comportamiento algoritmo de programación con fuerza bruta, se generaron mediante un script en Python (input\_generator.py). Se crearon archivos de entrada que contienen pares de secuencias aleatorias de longitud acotada, con un n\'umero de casos (\texttt{k}) que aumenta progresivamente.
+
+La idea consisti\'o en variar el valor de \texttt{k} comenzando desde 10, y aument\'andolo de forma escalonada: en tramos de 10 hasta 100, luego en pasos m\'as amplios (150, 2250, etc.) hasta alcanzar un m\'aximo de 10 millones. Para cada archivo se generaron hasta 100.000 pares de secuencias.
+
+Cada secuencia fue construida con caracteres aleatorios del alfabeto ingl\'es en may\'usculas (\texttt{A--Z}), con una longitud $n$ y $m$ elegidas aleatoriamente entre 1 y un l\'imite superior de 20. Esta acotaci\'on se hizo debido al alto tiempo que le tomaba al algoritmo de fuerza bruta en realizar la tarea (como se vera más adelante) y para que el tiempo de ejecución para la creación de los inputs no fuera demasiado extensa. Sin embargo se realizó otro generador de inputs (que sigue la misma lógica) para testear de mejor manera al algoritmo de programación dinámica pues tuvo mejores resultados en los tiempos (como se vera más adelante tambien) con un limite superior de 100 para la longitud de $n$ y $m$.
+
+Esta generaci\'on progresiva de casos permite observar el comportamiento del algoritmo frente a distintos vol\'umenes de entrada, manteniendo constante la complejidad por caso pero variando la carga total del archivo.
+
